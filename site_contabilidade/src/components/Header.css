@@ -1,0 +1,66 @@
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #0a2a66;
+}
+
+.logo .dot {
+  color: #00e0d8;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 24px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #0a2a66;
+  font-weight: 500;
+}
+
+/* Ações */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.login {
+  text-decoration: none;
+  color: #0a2a66;
+  font-weight: 500;
+}
+
+/* Botão */
+.cta {
+  background-color: #00e0d8;
+  color: #003366;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background-color: #00cfc8;
+}
