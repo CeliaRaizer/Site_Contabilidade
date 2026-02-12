@@ -9,7 +9,7 @@ function Header() {
       <div className="header-container">
         {/* Logo */}
         <div className="logo">
-          <span>Contabilizei</span>
+          <span>VITTA Contábil</span>
           <span className="dot">.</span>
         </div>
 
