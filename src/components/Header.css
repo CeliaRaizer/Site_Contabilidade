@@ -15,11 +15,11 @@
 .logo {
   font-size: 28px;
   font-weight: bold;
-  color: #0b2a6f;
+  color: #1F4D2E;
 }
 
 .dot {
-  color: #00e5e5;
+  color: #1F4D2E;
 }
 
 .menu {
@@ -29,7 +29,7 @@
 
 .menu a {
   text-decoration: none;
-  color: #0b2a6f;
+  color: #1F4D2E;
   font-weight: 500;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .cta {
-  background: #00e5e5;
+  background: #5aad76;
   border: none;
   padding: 12px 20px;
   border-radius: 24px;
@@ -85,7 +85,7 @@
 .mobile-menu a {
   text-decoration: none;
   font-size: 18px;
-  color: #0b2a6f;
+  color: #1F4D2E;
   border-bottom: 1px solid #ddd;
   padding-bottom: 12px;
 }

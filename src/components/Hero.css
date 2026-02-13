@@ -1,0 +1,90 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+
+/* Camada escura por cima da imagem */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  padding: 40px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.primary {
+  background-color: #1e73e8;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
