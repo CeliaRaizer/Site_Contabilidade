@@ -1,0 +1,142 @@
+.plans {
+  padding: 100px 5%;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.plans h2 {
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+
+.plans h2 span {
+  font-weight: bold;
+  color: #0a3d62;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* CARD BASE */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: left;
+  position: relative;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #0a3d62;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* PREÇO */
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.price span {
+  font-size: 16px;
+}
+
+.price h1 {
+  font-size: 56px;
+  margin: 0;
+}
+
+.price p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* BOTÃO */
+.card button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: #1e73e8;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* CARD DESTAQUE */
+.featured {
+  background: #0a3d62;
+  color: white;
+  transform: scale(1.05);
+}
+
+.featured h3,
+.featured .description,
+.featured .price p {
+  color: white;
+}
+
+.featured button {
+  background: #1e73e8;
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: #0a3d62;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featured {
+    transform: scale(1);
+  }
+
+  .destaque-maior {
+    width: 320px;
+    transform: scale(1);
+  }
+}
+
+.destaque-maior {
+    background: linear-gradient(135deg, #0a1d2c, #253541);
+    color: white;
+    width: 380px;
+    transform: scale(1.08);
+    z-index: 2;
+}

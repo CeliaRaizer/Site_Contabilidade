@@ -15,10 +15,10 @@ function Header() {
 
         {/* Menu desktop */}
         <nav className="menu">
-          <a href="#">Serviços ▾</a>
-          <a href="#">Nossa História ▾</a>
-          <a href="#">Conteúdos ▾</a>
-          <a href="#">Como funciona ▾</a>
+          <a href="#">Serviços▾</a>
+          <a href="#planos">Planos▾</a>
+          <a href="#">Conteúdos▾</a>
+          <a href="#">Como funciona▾</a>
         </nav>
 
         {/* Ações */}
@@ -46,7 +46,7 @@ function Header() {
           </button>
 
           <a href="#">Serviços</a>
-          <a href="#">Nossa Historia</a>
+          <a href="#planos">Planos▾</a>
           <a href="#">Conteúdos</a>
           <a href="#">Como funciona</a>
 

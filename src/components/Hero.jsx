@@ -23,7 +23,7 @@ function Hero() {
 
         <div className="buttons">
           <button className="primary">Abrir Empresa</button>
-          <button className="secondary">Trocar de Contador</button>
+          <button className="primary">Trocar de Contador</button>
         </div>
       </div>
     </section>
