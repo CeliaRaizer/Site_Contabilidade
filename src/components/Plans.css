@@ -1,6 +1,6 @@
 .plans {
   padding: 100px 5%;
-  background: #f5f7fa;
+  background: linear-gradient(to bottom, #f8fafc, #eef2f7);
   text-align: center;
 }
 
@@ -23,17 +23,17 @@
 
 /* CARD BASE */
 .card {
-  background: white;
+  background: #ffffff;
   border-radius: 20px;
-  padding: 40px 30px;
-  width: 320px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 35px 25px;
+  width: 100%;
+  max-width: 340px;
+  box-shadow: 
+    0 10px 25px rgba(0,0,0,0.05),
+    0 5px 10px rgba(0,0,0,0.03);
   text-align: left;
-  position: relative;
   transition: 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border: 1px solid #edf2f7;
 }
 
 .card:hover {
@@ -41,7 +41,7 @@
 }
 
 .card h3 {
-  font-size: 26px;
+  font-size: 22px;
   margin-bottom: 15px;
   color: #0a3d62;
 }
@@ -80,12 +80,16 @@
   padding: 14px;
   border-radius: 30px;
   border: none;
-  background: #1e73e8;
+  background: linear-gradient(135deg, #1e73e8, #0a3d62);
   color: white;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.3s;
 }
 
+.card button:hover {
+  opacity: 0.9;
+}
 /* CARD DESTAQUE */
 .featured {
   background: #0a3d62;
@@ -146,11 +150,11 @@
 /* ========================= */
 @media (max-width: 768px) {
 
-  .plans {
+  .plans{
     padding: 50px 20px;
   }
-
-  .plans-container {
+  
+   .plans-container {
     flex-direction: column;
     gap: 20px;
   }
@@ -169,13 +173,10 @@
     transform: none;
     width: 100%;
   }
-
 }
-
 
 .installments {
   font-size: 13px;
-  color: #777;
-  margin-top: -20px;
-  margin-bottom: 25px;
+  color: #6b7280; /* cinza mais elegante */
+  margin-bottom: 20px;
 }
