@@ -148,12 +148,11 @@ function Plans() {
                         Para empresas com equipe ou que querem crescimento estruturado
                     </p>
 
-                    <div className="price">
+                   <div className="price">
                         <span>R$</span>
                         <h1>490</h1>
-                        <small>/mês</small> <br />
+                        <small>/mês</small>
                     </div>
-
                     <ul className="benefits">
                         <li>Tudo do Essencial</li>
                         <li>Folha de pagamento (até 2 funcionários)</li>
@@ -215,7 +214,7 @@ function Plans() {
                     <div className="price">
                         <span>R$</span>
                         <h1>490</h1>
-                        <small>/mês</small> <br />
+                        <small>/mês</small>
                     </div>
 
                     <ul className="benefits">
