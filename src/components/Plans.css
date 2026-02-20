@@ -144,25 +144,15 @@
 /* ========================= */
 /* 📱 MOBILE REAL (até 768px) */
 /* ========================= */
-
 @media (max-width: 768px) {
 
   .plans {
-    padding: 60px 20px;
-  }
-
-  .plans h1 {
-    font-size: 24px;
-  }
-
-  .plans h2 {
-    font-size: 20px;
-    margin-bottom: 40px;
+    padding: 50px 20px;
   }
 
   .plans-container {
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
   }
 
   .card {
@@ -170,44 +160,22 @@
     padding: 25px 20px;
   }
 
-  .card h3 {
-    font-size: 20px;
+  .price h1 {
+    font-size: 38px;
   }
 
- .price {
-  display: flex;
-  align-items: flex-end;
-  gap: 5px;
-  margin-bottom: 25px;
-}
-
-.price span {
-  font-size: 16px;
-}
-
-.price h1 {
-  font-size: 48px;
-  line-height: 1;
-}
-
-.price small {
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-
-  .benefits {
-    padding-left: 18px;
-    font-size: 14px;
-  }
-
-  .card button {
-    margin-top: 20px;
-    padding: 12px;
-  }
-
-  /* Remove destaque exagerado no mobile */
-  .featured {
+  .featured,
+  .destaque-maior {
     transform: none;
+    width: 100%;
   }
 
+}
+
+
+.installments {
+  font-size: 13px;
+  color: #777;
+  margin-top: -20px;
+  margin-bottom: 25px;
 }

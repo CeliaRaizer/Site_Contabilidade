@@ -21,11 +21,14 @@ function Plans() {
                     </p>
 
                     <div className="price">
-                    <span>R$</span>
-                    <h1>50</h1>
-                    <small>/mês</small> <br />
-                    <p>No Plano Anual em 12x no Cartão de Crédito</p>
+                        <span>R$</span>
+                        <h1>50</h1>
+                        <small>/mês</small>
                     </div>
+
+                    <p className="installments">
+                        No plano anual em 12x no cartão de crédito
+                    </p>
 
                     <ul className="benefits">
                     <li>Abertura da empresa no MEI sem custos</li>
@@ -53,9 +56,12 @@ function Plans() {
                     <div className="price">
                         <span>R$</span>
                         <h1>100</h1>
-                        <small>/mês</small> <br />
-                        <p>No Plano Anual em 12x no Cartão de Crédito</p>
+                        <small>/mês</small>
                     </div>
+
+                    <p className="installments">
+                        No plano anual em 12x no cartão de crédito
+                    </p>
 
                     <ul className="benefits">
                         <li>Abertura da empresa no MEI sem custos</li>
