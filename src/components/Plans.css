@@ -1,49 +1,70 @@
+/* ========================= */
+/* SECTION PLANOS */
+/* ========================= */
+
 .plans {
   padding: 100px 5%;
-  background: linear-gradient(to bottom, #f8fafc, #eef2f7);
+  background: radial-gradient(circle at top left, #65c09f, #0B2F23);
   text-align: center;
 }
 
+.plans h1 {
+  color: #ffffff;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
 .plans h2 {
-  font-size: 32px;
-  margin-bottom: 60px;
+  color: #ffffff;
 }
 
 .plans h2 span {
-  font-weight: bold;
-  color: #0a3d62;
+  color: #d4af37;
 }
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
 
 .plans-container {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
+/* ========================= */
 /* CARD BASE */
+/* ========================= */
+
 .card {
   background: #ffffff;
-  border-radius: 20px;
-  padding: 35px 25px;
+  border-radius: 18px;
+  padding: 35px 30px;
   width: 100%;
-  max-width: 340px;
-  box-shadow: 
-    0 10px 25px rgba(0,0,0,0.05),
-    0 5px 10px rgba(0,0,0,0.03);
+  max-width: 320px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
   text-align: left;
   transition: 0.3s ease;
-  border: 1px solid #edf2f7;
+  position: relative;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
 .card h3 {
+  color: #0f2f25;
   font-size: 22px;
-  margin-bottom: 15px;
-  color: #0a3d62;
+  margin-bottom: 10px;
+}
+
+.installments {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 20px;
 }
 
 .description {
@@ -52,7 +73,10 @@
   margin-bottom: 30px;
 }
 
+/* ========================= */
 /* PREÇO */
+/* ========================= */
+
 .price {
   display: flex;
   align-items: baseline;
@@ -62,11 +86,13 @@
 
 .price span {
   font-size: 16px;
+  color: #0f2f25;
 }
 
 .price h1 {
-  font-size: 56px;
+  font-size: 48px;
   margin: 0;
+  color: #0f2f25;
 }
 
 .price p {
@@ -74,13 +100,16 @@
   color: #555;
 }
 
-/* BOTÃO */
+/* ========================= */
+/* BOTÃO PADRÃO */
+/* ========================= */
+
 .card button {
   width: 100%;
   padding: 14px;
   border-radius: 30px;
   border: none;
-  background: linear-gradient(135deg, #1e73e8, #0a3d62);
+  background: linear-gradient(135deg, #164a3a, #0f2f25);
   color: white;
   font-weight: 600;
   cursor: pointer;
@@ -90,37 +119,47 @@
 .card button:hover {
   opacity: 0.9;
 }
-/* CARD DESTAQUE */
-.featured {
-  background: #0a3d62;
-  color: white;
-  transform: scale(1.05);
-}
 
-.featured h3,
-.featured .description,
-.featured .price p {
-  color: white;
+/* ========================= */
+/* CARD DESTAQUE PREMIUM */
+/* ========================= */
+
+.featured {
+  background: #ffffff;
+  border: 2px solid #d4af37;
+  transform: scale(1.05);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+  z-index: 2;
 }
 
 .featured button {
-  background: #1e73e8;
+  background: #d4af37;
+  color: #0f2f25;
+  font-weight: 700;
 }
+
+/* ========================= */
+/* BADGE PREMIUM */
+/* ========================= */
 
 .badge {
   position: absolute;
-  top: -15px;
+  top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: white;
-  color: #0a3d62;
-  padding: 5px 15px;
-  border-radius: 20px;
+  background: #d4af37;
+  color: #0f2f25;
+  padding: 6px 18px;
+  border-radius: 30px;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
+/* ========================= */
 /* RESPONSIVO */
+/* ========================= */
+
 @media (max-width: 900px) {
   .plans-container {
     flex-direction: column;
@@ -128,33 +167,17 @@
   }
 
   .featured {
-    transform: scale(1);
-  }
-
-  .destaque-maior {
-    width: 320px;
-    transform: scale(1);
+    transform: none;
   }
 }
 
-.destaque-maior {
-    background: linear-gradient(135deg, #0a1d2c, #253541);
-    color: white;
-    width: 380px;
-    transform: scale(1.08);
-    z-index: 2;
-}
-
-/* ========================= */
-/* 📱 MOBILE REAL (até 768px) */
-/* ========================= */
 @media (max-width: 768px) {
 
-  .plans{
+  .plans {
     padding: 50px 20px;
   }
-  
-   .plans-container {
+
+  .plans-container {
     flex-direction: column;
     gap: 20px;
   }
@@ -168,15 +191,8 @@
     font-size: 38px;
   }
 
-  .featured,
-  .destaque-maior {
+  .featured {
     transform: none;
     width: 100%;
   }
-}
-
-.installments {
-  font-size: 13px;
-  color: #6b7280; /* cinza mais elegante */
-  margin-bottom: 20px;
 }
