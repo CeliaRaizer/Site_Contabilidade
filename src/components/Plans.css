@@ -1,24 +1,9 @@
-/* ========================= */
-/* SECTION PLANOS */
-/* ========================= */
+/* ================= SECTION PLANOS ================= */
 
 .plans {
   padding: 100px 5%;
   background: radial-gradient(circle at top left, #65c09f, #0B2F23);
   text-align: center;
-}
-
-.price h1 {
-  font-size: 48px;
-  margin: 0;
-  color: #0f2f25; /* força cor sólida */
-  opacity: 1;
-}
-
-.price span {
-  font-size: 16px;
-  color: #0f2f25;
-  opacity: 1;
 }
 
 .plans h2 {
@@ -29,9 +14,7 @@
   color: #d4af37;
 }
 
-/* ========================= */
-/* CONTAINER */
-/* ========================= */
+/* ================= CONTAINER ================= */
 
 .plans-container {
   display: flex;
@@ -42,9 +25,7 @@
   margin: 0 auto;
 }
 
-/* ========================= */
-/* CARD BASE */
-/* ========================= */
+/* ================= CARD BASE ================= */
 
 .card {
   background: #ffffff;
@@ -57,7 +38,6 @@
   transition: 0.3s ease;
   position: relative;
   color: #0f2f25;
-  opacity: 1;
 }
 
 .card:hover {
@@ -81,15 +61,14 @@
   margin-bottom: 30px;
 }
 
-/* ========================= */
-/* PREÇO */
-/* ========================= */
+/* ================= PREÇO ================= */
 
 .price {
   display: flex;
   align-items: baseline;
   gap: 8px;
   margin-bottom: 30px;
+  color: #0f2f25;
 }
 
 .price span {
@@ -106,9 +85,7 @@
   color: #555;
 }
 
-/* ========================= */
-/* BOTÃO PADRÃO */
-/* ========================= */
+/* ================= BOTÃO ================= */
 
 .card button {
   width: 100%;
@@ -126,9 +103,7 @@
   opacity: 0.9;
 }
 
-/* ========================= */
-/* CARD DESTAQUE PREMIUM */
-/* ========================= */
+/* ================= CARD PREMIUM ================= */
 
 .featured {
   border: 2px solid #d4af37;
@@ -143,9 +118,7 @@
   font-weight: 700;
 }
 
-/* ========================= */
-/* BADGE PREMIUM */
-/* ========================= */
+/* ================= BADGE ================= */
 
 .badge {
   position: absolute;
@@ -161,9 +134,7 @@
   letter-spacing: 0.5px;
 }
 
-/* ========================= */
-/* RESPONSIVO */
-/* ========================= */
+/* ================= RESPONSIVO ================= */
 
 @media (max-width: 900px) {
   .plans-container {
@@ -177,20 +148,11 @@
 }
 
 @media (max-width: 768px) {
-
-   .plans {
+  .plans {
     padding: 60px 20px;
-    width: 100%;
-    overflow-x: hidden;
-  }
-  
-  .plans-container {
-    flex-direction: column;
-    gap: 20px;
   }
 
   .card {
-    width: 100%;
     max-width: 100%;
     padding: 25px 20px;
   }
