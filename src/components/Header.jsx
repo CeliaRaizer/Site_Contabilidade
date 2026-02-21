@@ -23,7 +23,14 @@ function Header() {
 
         {/* Ações */}
         <div className="actions">
-          <button className="cta"> Entre em contato</button>
+          <a
+              href="https://wa.me/5549998249058" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta"
+            >
+            Entre em contato
+        </a>
 
           {/* Botão mobile */}
           <button
@@ -50,9 +57,14 @@ function Header() {
           <a href="#">Conteúdos</a>
           <a href="#">Como funciona</a>
 
-          <button className="cta mobile-cta">
+          <a
+            href="https://wa.me/5549998249058" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta mobile-cta"
+          >
             Entre em contato
-          </button>
+          </a>
         </div>
       )}
     </header>
