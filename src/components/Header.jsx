@@ -44,7 +44,7 @@ function Header() {
 
       {/* Menu mobile */}
       {menuOpen && (
-        <div className="mobile-menu">
+        <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
           <button
             className="close"
             onClick={() => setMenuOpen(false)}
