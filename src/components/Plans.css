@@ -178,10 +178,12 @@
 
 @media (max-width: 768px) {
 
-  .plans {
+   .plans {
     padding: 60px 20px;
+    width: 100%;
+    overflow-x: hidden;
   }
-
+  
   .plans-container {
     flex-direction: column;
     gap: 20px;
