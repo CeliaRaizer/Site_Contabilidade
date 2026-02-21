@@ -8,10 +8,17 @@
   text-align: center;
 }
 
-.plans h1 {
-  color: #ffffff;
-  font-size: 36px;
-  margin-bottom: 10px;
+.price h1 {
+  font-size: 48px;
+  margin: 0;
+  color: #0f2f25; /* força cor sólida */
+  opacity: 1;
+}
+
+.price span {
+  font-size: 16px;
+  color: #0f2f25;
+  opacity: 1;
 }
 
 .plans h2 {
@@ -40,7 +47,7 @@
 /* ========================= */
 
 .card {
-  background: #0f2f25;
+  background: #ffffff;
   border-radius: 18px;
   padding: 35px 30px;
   width: 100%;
@@ -49,6 +56,8 @@
   text-align: left;
   transition: 0.3s ease;
   position: relative;
+  color: #0f2f25;
+  opacity: 1;
 }
 
 .card:hover {
@@ -56,7 +65,6 @@
 }
 
 .card h3 {
-  color: #0f2f25;
   font-size: 22px;
   margin-bottom: 10px;
 }
@@ -86,13 +94,11 @@
 
 .price span {
   font-size: 16px;
-  color: #0f2f25;
 }
 
 .price h1 {
   font-size: 48px;
   margin: 0;
-  color: #0f2f25;
 }
 
 .price p {
@@ -125,7 +131,6 @@
 /* ========================= */
 
 .featured {
-  background: #ffffff;
   border: 2px solid #d4af37;
   transform: scale(1.05);
   box-shadow: 0 25px 60px rgba(0,0,0,0.18);
@@ -174,7 +179,7 @@
 @media (max-width: 768px) {
 
   .plans {
-    padding: 50px 20px;
+    padding: 60px 20px;
   }
 
   .plans-container {
@@ -184,6 +189,7 @@
 
   .card {
     width: 100%;
+    max-width: 100%;
     padding: 25px 20px;
   }
 
