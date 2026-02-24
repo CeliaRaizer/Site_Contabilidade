@@ -3,7 +3,10 @@
 /* ================= SECTION PLANOS ================= */
 
 .plans {
-  padding: 100px 5%;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 20px; /* remove 5% */
+  box-sizing: border-box;
   background: radial-gradient(circle at top left, #65c09f, #0B2F23);
   text-align: center;
 }
