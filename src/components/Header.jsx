@@ -17,7 +17,7 @@ function Header() {
         <nav className="menu">
           <a href="#">Serviços▾</a>
           <a href="#planos">Planos▾</a>
-          <a href="#">Conteúdos▾</a>
+          <a href="#contato">Contatos▾</a>
           <a href="#">Como funciona▾</a>
         </nav>
 
@@ -54,7 +54,7 @@ function Header() {
 
           <a href="#">Serviços</a>
           <a href="#planos">Planos▾</a>
-          <a href="#">Conteúdos</a>
+          <a href="#contato">Contatos▾</a>
           <a href="#">Como funciona</a>
 
           <a

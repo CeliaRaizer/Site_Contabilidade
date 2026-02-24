@@ -17,8 +17,9 @@ function Hero() {
         </h1>
 
         <p>
-          Cuidamos do seu MEI ou empresa do Simples enquanto você foca no 
-          que realmente importa: faturar.        
+          Cuidamos do seu MEI ou empresa do Simples <br></br> 
+          enquanto você foca no 
+          que realmente importa: FATURAR!        
         </p>
 
         <div className="buttons">

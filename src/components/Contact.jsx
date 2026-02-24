@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <section>
+    <section className="contact" id="contato">
       <h2>Contato</h2>
       <p>
         📞 WhatsApp: 
