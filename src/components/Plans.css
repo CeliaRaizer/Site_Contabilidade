@@ -154,12 +154,19 @@
 
 @media (max-width: 768px) {
   .plans {
-    padding: 60px 20px;
+    padding: 60px 16px;
+  }
+
+  .plans-container {
+    width: 100%;
+    padding: 0;
   }
 
   .card {
-    max-width: 100%;
+    width: 100%;
+    max-width: 340px;   /* controla o tamanho real */
     padding: 25px 20px;
+    margin: 0 auto;     /* centraliza */
   }
 
   .price h1 {
@@ -168,6 +175,6 @@
 
   .featured {
     transform: none;
-    width: 100%;
   }
 }
+
