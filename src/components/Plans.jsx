@@ -1,5 +1,17 @@
 import "./Plans.css";
 
+const enviarWhatsApp = (plano) => {
+  const numero = "5549998249058";
+
+  const mensagem = `Olá! 
+Tenho interesse no plano ${plano} da VITTA Contábil.
+Poderia me passar mais informações?`;
+
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(url, "_blank");
+};
+
 function Plans() {
   return (
     <section className="plans" id="planos">
@@ -39,7 +51,9 @@ function Plans() {
                     </ul>
                 </div>
 
-                <button>Quero esse Plano</button>
+                <button onClick={() => enviarWhatsApp("Classic")}>
+                    Quero esse Plano
+                </button>
             </div>
 
             {/* PREMIUM */}
@@ -75,7 +89,9 @@ function Plans() {
                     </ul>
                 </div>
 
-                    <button>Quero esse Plano</button>
+                <button onClick={() => enviarWhatsApp("Premium")}>
+                    Quero esse Plano
+                </button>
             </div>
 
         </div>
@@ -111,7 +127,9 @@ function Plans() {
                     </ul>
                 </div>
 
-                <button>Quero esse Plano</button>
+                <button onClick={() => enviarWhatsApp("Essencial")}>
+                    Quero esse Plano
+                </button>
             </div>
 
             {/* Gestão */}
@@ -140,7 +158,9 @@ function Plans() {
                     </ul>
                 </div>
 
-                    <button>Quero esse Plano</button>
+                    <button onClick={() => enviarWhatsApp("Gestão")}>
+                        Quero esse Plano
+                    </button>
             </div>
 
             {/* Estrategico */}
@@ -168,7 +188,9 @@ function Plans() {
                     </ul>
                 </div>
 
-                <button>Quero esse Plano</button>
+                    <button onClick={() => enviarWhatsApp("Estratégico")}>
+                        Quero esse Plano
+                    </button>
             </div>
         </div>
     
@@ -203,7 +225,9 @@ function Plans() {
                     </ul>
                 </div>
 
-                <button>Quero esse Plano</button>
+                    <button onClick={() => enviarWhatsApp("Essencial de Comércio")}>
+                        Quero esse Plano
+                    </button>
             </div>
 
             {/* Gestão */}
@@ -233,7 +257,9 @@ function Plans() {
                     </ul>
                 </div>
 
-                    <button>Quero esse Plano</button>
+                    <button onClick={() => enviarWhatsApp("Gestão de Comércio")}>
+                        Quero esse Plano
+                    </button>
             </div>
 
         </div>
