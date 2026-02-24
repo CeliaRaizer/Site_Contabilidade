@@ -163,8 +163,8 @@
   }
 
   .card {
-    width: 100%;
-    max-width: 340px;   /* controla o tamanho real */
+    width: 90%;
+    max-width: 320px;   /* controla o tamanho real */
     padding: 25px 20px;
     margin: 0 auto;     /* centraliza */
   }
