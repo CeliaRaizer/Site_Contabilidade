@@ -1,6 +1,31 @@
 import heroImage from "../assets/hero.jpg";
 import "./Hero.css";
 
+const abrirEmpresaWhatsApp = () => {
+  const numero = "5549998249058";
+
+  const mensagem = `Olá!
+
+Gostaria de abrir minha empresa com a VITTA Contábil.
+Poderia me explicar os próximos passos?`;
+
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(url, "_blank");
+};
+
+const trocarContador = () => {
+  const numero = "5549998249058";
+
+  const mensagem = `Olá!
+
+Tenho interesse em trocar de contador e gostaria de migrar para a VITTA Contábil.
+Vocês podem me orientar sobre os próximos passos?`;
+
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(url, "_blank");
+};
 
 function Hero() {
   return (
@@ -23,8 +48,18 @@ function Hero() {
         </p>
 
         <div className="buttons">
-          <button className="primary">Abrir Empresa</button>
-          <button className="primary">Trocar de Contador</button>
+          <button 
+            className="primary"
+            onClick={abrirEmpresaWhatsApp}
+          >
+            Abrir Empresa
+          </button>
+           <button 
+            className="primary"
+            onClick={trocarContador}
+          >
+            Trocar de Contador
+          </button>
         </div>
       </div>
     </section>
