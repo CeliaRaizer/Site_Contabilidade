@@ -12,7 +12,11 @@ function Contact() {
   return (
     <div className="floating-icons">
       
-      <a href="#" className="icon-btn">
+      <a href="https://www.instagram.com/contadora.elainefae" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="icon-btn insta-btn"
+        >
         <FaInstagram />
       </a>
 
