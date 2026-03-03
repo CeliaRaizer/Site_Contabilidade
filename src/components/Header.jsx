@@ -18,7 +18,7 @@ function Header() {
           <a href="#">Serviços▾</a>
           <a href="#planos">Planos▾</a>
           <a href="#contato">Contatos▾</a>
-          <a href="#">Como funciona▾</a>
+          <a href="#sobre">Sobre▾</a>
         </nav>
 
         {/* Ações */}
@@ -55,7 +55,7 @@ function Header() {
           <a href="#">Serviços</a>
           <a href="#planos">Planos▾</a>
           <a href="#contato">Contatos▾</a>
-          <a href="#">Como funciona</a>
+          <a href="#sobre">Sobre</a>
 
           <a
             href="https://wa.me/5549998249058" 
