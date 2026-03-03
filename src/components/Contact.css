@@ -1,0 +1,32 @@
+/* ================= ÍCONES SOCIAIS ================= */
+
+.floating-icons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  gap: 20px;
+  z-index: 999;
+}
+
+.icon-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #0f2f59;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
