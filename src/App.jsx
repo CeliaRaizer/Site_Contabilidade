@@ -5,20 +5,37 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Plans from "./components/Plans";
-
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <Hero />
-      <Services />
-      <About />
-      <Plans />
-      <Contact />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <h1>HOME TESTE</h1>
+              <Hero />
+              <Services />
+              <About />
+              <Plans />
+              <Contact />
+            </>
+          }
+        />
+
+        <Route path="/servicos" element={<Services />} />
+        <Route path="/planos" element={<Plans />} />
+        <Route path="/contato" element={<Contact />} />
+        <Route path="/sobre" element={<About />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+
       <Footer />
-      
-    </>
+    </BrowserRouter>
   );
 }
 

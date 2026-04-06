@@ -14,7 +14,7 @@ function About() {
           <p>
             Sou contadora especializada em <strong>Imposto de Renda, MEI e pequenas empresas</strong>. 
             Meu objetivo é ajudar pessoas e negócios a manterem suas finanças organizadas, 
-            pagarem menos impostos dentro da lei e evitarem problemas com o fisco.
+            pagarem menos impostos dentro da lei e evitarem problemas com o Fisco.
           </p>
 
           <p>

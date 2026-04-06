@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"; // ✅ IMPORT CORRETO AQUI EM CIMA
 import "./Header.css";
 
 function Header() {
@@ -15,22 +16,23 @@ function Header() {
 
         {/* Menu desktop */}
         <nav className="menu">
-          <a href="#">Serviços▾</a>
-          <a href="#planos">Planos▾</a>
-          <a href="#contato">Contatos▾</a>
-          <a href="#sobre">Sobre▾</a>
+          <Link to="/">Início</Link>
+          <Link to="/servicos">Serviços▾</Link>
+          <Link to="/planos">Planos▾</Link>
+          <Link to="/contato">Contatos▾</Link>
+          <Link to="/sobre">Sobre▾</Link>
         </nav>
 
         {/* Ações */}
         <div className="actions">
           <a
-              href="https://wa.me/5549998249058" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta"
-            >
+            href="https://wa.me/5549998249058"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta"
+          >
             Entre em contato
-        </a>
+          </a>
 
           {/* Botão mobile */}
           <button
@@ -52,13 +54,13 @@ function Header() {
             ✕
           </button>
 
-          <a href="#">Serviços</a>
-          <a href="#planos">Planos▾</a>
-          <a href="#contato">Contatos▾</a>
-          <a href="#sobre">Sobre</a>
+          <Link to="/servicos" onClick={() => setMenuOpen(false)}>Serviços</Link>
+          <Link to="/planos" onClick={() => setMenuOpen(false)}>Planos</Link>
+          <Link to="/contato" onClick={() => setMenuOpen(false)}>Contatos</Link>
+          <Link to="/sobre" onClick={() => setMenuOpen(false)}>Sobre</Link>
 
           <a
-            href="https://wa.me/5549998249058" 
+            href="https://wa.me/5549998249058"
             target="_blank"
             rel="noopener noreferrer"
             className="cta mobile-cta"

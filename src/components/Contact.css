@@ -1,32 +1,51 @@
-/* ================= ÍCONES SOCIAIS ================= */
-
-.floating-icons {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: flex;
-  gap: 20px;
-  z-index: 999;
-}
-
-.icon-btn {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: white;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
+/* FUNDO GERAL */
+.contact-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2f25, #164a3a);
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  color: #0f2f59;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
 }
 
-.icon-btn:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+/* CARD CENTRAL */
+.contact-card {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* TEXTO */
+.contact-card h1 {
+  margin-bottom: 10px;
+  color: #0f2f25;
+}
+
+.contact-card p {
+  color: #555;
+}
+
+/* BOTÕES */
+.contact-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-contact {
+  background: #164a3a;
+  color: white;
+  padding: 12px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-contact:hover {
+  background: #0f2f25;
 }
