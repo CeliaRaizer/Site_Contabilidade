@@ -43,7 +43,7 @@ function Contact() {
 
           {/* Instagram Elaine */}
           <a
-            href="https://www.instagram.com/contadora.elainefae"
+            href="https://www.instagram.com/elaine.fae?igsh=MXRnNTZieW4xZ3ljcA=="
             target="_blank"
             rel="noopener noreferrer"
             className="channel-btn"
