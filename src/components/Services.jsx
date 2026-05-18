@@ -1,72 +1,84 @@
 import "./Services.css";
 
+const services = [
+  {
+    icon: "🏢",
+    title: "Abertura e Formalização",
+    items: [
+      "Abertura de MEI e ME",
+      "Regularização na Prefeitura",
+      "Desenquadramento do MEI",
+      "Alterações e baixa de CNPJ",
+    ],
+  },
+  {
+    icon: "📊",
+    title: "Contabilidade e Acompanhamento",
+    items: [
+      "Contabilidade mensal obrigatória (ME)",
+      "Acompanhamento mensal para MEI",
+      "Gestão de funcionários",
+      "Emissão de guias e obrigações fiscais",
+    ],
+  },
+  {
+    icon: "⚖️",
+    title: "Regularizações e Pendências",
+    items: [
+      "Regularização de débitos",
+      "Parcelamentos",
+      "Regularização na Prefeitura",
+      "Declarações em atraso",
+    ],
+  },
+  {
+    icon: "👤",
+    title: "Autônomos e Pessoa Física",
+    items: [
+      "Carnê-Leão mensal",
+      "Livro Caixa para reduzir imposto",
+      "Emissão de guia de INSS",
+      "Imposto de Renda Pessoa Física",
+      "Gestão de domésticos",
+    ],
+  },
+  {
+    icon: "💡",
+    title: "Planejamento e Consultoria",
+    items: [
+      "Planejamento tributário",
+      "Consultoria financeira",
+      "Estratégias para pagar menos imposto dentro da lei",
+    ],
+  },
+];
+
 function Services() {
   return (
     <section className="services-section" id="servicos">
       <div className="services-container">
 
-        <h2>Nossos Serviços</h2>
-        <p className="services-subtitle">
-          Soluções completas para sua empresa e sua vida financeira.
-        </p>
+        <div className="services-header">
+          <span className="services-tag">Nossos serviços</span>
+          <h2>Tudo que o seu negócio precisa</h2>
+          <p className="services-subtitle">
+            Soluções completas para sua empresa e sua vida financeira,
+            do MEI à empresa consolidada.
+          </p>
+        </div>
 
         <div className="services-grid">
-
-          {/* ABERTURA */}
-          <div className="service-card">
-            <h3>Abertura e Formalização</h3>
-            <ul>
-              <li>Abertura de MEI e ME</li>
-              <li>Regularização na Prefeitura</li>
-              <li>Desenquadramento do MEI</li>
-              <li>Alterações e baixa de CNPJ</li>
-            </ul>
-          </div>
-
-          {/* CONTABILIDADE */}
-          <div className="service-card">
-            <h3>Contabilidade e Acompanhamento</h3>
-            <ul>
-              <li>Contabilidade mensal obrigatória (ME)</li>
-              <li>Acompanhamento mensal para MEI</li>
-              <li>Gestão de funcionários</li>
-              <li>Emissão de guias e obrigações fiscais</li>
-            </ul>
-          </div>
-
-          {/* REGULARIZAÇÃO */}
-          <div className="service-card">
-            <h3>Regularizações e Pendências</h3>
-            <ul>
-              <li>Regularização de débitos</li>
-              <li>Parcelamentos</li>
-              <li>Regularização na Prefeitura</li>
-              <li>Declarações em atraso</li>
-            </ul>
-          </div>
-
-          {/* PESSOA FÍSICA */}
-          <div className="service-card">
-            <h3>Autônomos e Pessoa Física</h3>
-            <ul>
-              <li>Carnê-Leão mensal</li>
-              <li>Livro Caixa para reduzir imposto</li>
-              <li>Emissão de guia de INSS</li>
-              <li>Imposto de Renda Pessoa Física</li>
-              <li>Gestão de domésticos</li>
-            </ul>
-          </div>
-
-          {/* PLANEJAMENTO */}
-          <div className="service-card">
-            <h3>Planejamento e Consultoria</h3>
-            <ul>
-              <li>Planejamento tributário</li>
-              <li>Consultoria financeira</li>
-              <li>Estratégias para pagar menos imposto dentro da lei</li>
-            </ul>
-          </div>
-
+          {services.map((s) => (
+            <div className="service-card" key={s.title}>
+              <div className="service-icon">{s.icon}</div>
+              <h3>{s.title}</h3>
+              <ul>
+                {s.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
       </div>

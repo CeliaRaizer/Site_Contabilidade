@@ -1,29 +1,10 @@
 import heroImage from "../assets/hero.jpg";
 import "./Hero.css";
 
-const abrirEmpresaWhatsApp = () => {
-  const numero = "5549998249058";
+const WHATSAPP = "5549998249058";
 
-  const mensagem = `Olá!
-
-Gostaria de abrir minha empresa com a VITTA Contábil.
-Poderia me explicar os próximos passos?`;
-
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-
-  window.open(url, "_blank");
-};
-
-const trocarContador = () => {
-  const numero = "5549998249058";
-
-  const mensagem = `Olá!
-
-Tenho interesse em trocar de contador e gostaria de migrar para a VITTA Contábil.
-Vocês podem me orientar sobre os próximos passos?`;
-
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-
+const abrirWhatsApp = (msg) => {
+  const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
   window.open(url, "_blank");
 };
 
@@ -33,34 +14,44 @@ function Hero() {
       className="hero"
       style={{ backgroundImage: `url(${heroImage})` }}
     >
-      <div className="overlay"></div>
+      <div className="hero-overlay" />
 
       <div className="hero-content">
+        <div className="hero-badge">Contabilidade Digital</div>
+
         <h1>
-          Contabilidade Descomplicada para quem quer crescer de verdade
-          <br />
+          Contabilidade descomplicada<br />
+          para quem quer <em>crescer de verdade</em>
         </h1>
 
         <p>
-          Cuidamos do seu MEI ou empresa do Simples <br></br> 
-          enquanto você foca no 
-          que realmente importa: FATURAR!        
+          Cuidamos do seu MEI ou empresa enquanto você foca
+          no que realmente importa: faturar.
         </p>
 
-        <div className="buttons">
-          <button 
-            className="primary"
-            onClick={abrirEmpresaWhatsApp}
+        <div className="hero-buttons">
+          <button
+            className="btn-hero-primary"
+            onClick={() =>
+              abrirWhatsApp(
+                "Olá!\n\nGostaria de abrir minha empresa com a VITTA Contábil.\nPoderia me explicar os próximos passos?"
+              )
+            }
           >
-            Abrir Empresa
+            Abrir Empresa →
           </button>
-           <button 
-            className="primary"
-            onClick={trocarContador}
+          <button
+            className="btn-hero-secondary"
+            onClick={() =>
+              abrirWhatsApp(
+                "Olá!\n\nTenho interesse em trocar de contador e migrar para a VITTA Contábil.\nVocês podem me orientar sobre os próximos passos?"
+              )
+            }
           >
             Trocar de Contador
           </button>
         </div>
+
       </div>
     </section>
   );

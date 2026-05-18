@@ -1,51 +1,144 @@
-/* FUNDO GERAL */
 .contact-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f2f25, #164a3a);
+  background: #1F4D2E;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 100px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Círculos decorativos de fundo */
+.contact-page::before,
+.contact-page::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(90,173,118,0.12);
+}
+.contact-page::before {
+  width: 500px; height: 500px;
+  top: -150px; right: -150px;
+}
+.contact-page::after {
+  width: 300px; height: 300px;
+  bottom: -80px; left: -80px;
 }
 
 /* CARD CENTRAL */
 .contact-card {
-  background: white;
-  padding: 50px 40px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-  max-width: 400px;
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 56px 48px;
   width: 100%;
+  max-width: 520px;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.25);
 }
 
-/* TEXTO */
+/* TAG */
+.contact-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5aad76;
+  margin-bottom: 12px;
+}
+
 .contact-card h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 400;
+  color: #1F4D2E;
+  line-height: 1.15;
   margin-bottom: 10px;
-  color: #0f2f25;
 }
 
-.contact-card p {
-  color: #555;
+.contact-card > p {
+  font-size: 15px;
+  color: #5a6472;
+  line-height: 1.6;
+  margin-bottom: 40px;
 }
 
-/* BOTÕES */
-.contact-buttons {
-  margin-top: 30px;
+/* BOTÕES DE CANAL */
+.contact-channels {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
 }
 
-.btn-contact {
-  background: #164a3a;
-  color: white;
-  padding: 12px;
-  border-radius: 25px;
+.channel-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1.5px solid #dde4da;
+  background: #ffffff;
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+  color: #1a1a1a;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.channel-btn:hover {
+  border-color: #5aad76;
+  background: #f3faf5;
+  transform: translateX(4px);
 }
 
-.btn-contact:hover {
-  background: #0f2f25;
+.channel-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.channel-icon.whatsapp { background: #dcfce7; }
+.channel-icon.instagram { background: #fce7f3; }
+.channel-icon.instagram2 { background: #ede9fe; }
+
+.channel-info { flex: 1; text-align: left; }
+.channel-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5a6472;
+  margin-bottom: 2px;
+}
+.channel-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1F4D2E;
+}
+
+.channel-arrow {
+  font-size: 18px;
+  color: #5aad76;
+}
+
+/* RODAPÉ DO CARD */
+.contact-card-footer {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #dde4da;
+  text-align: center;
+}
+.contact-card-footer p {
+  font-size: 13px;
+  color: #5a6472;
+}
+.contact-card-footer strong { color: #1F4D2E; }
+
+@media (max-width: 600px) {
+  .contact-page { padding: 80px 20px; }
+  .contact-card { padding: 36px 24px; }
 }

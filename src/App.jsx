@@ -31,6 +31,7 @@ function App() {
         <Route path="/planos" element={<Plans />} />
         <Route path="/contato" element={<Contact />} />
         <Route path="/sobre" element={<About />} />
+        <Route path="/inicio" element={<Hero />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
 

@@ -1,269 +1,190 @@
 import "./Plans.css";
 
+const WHATSAPP = "5549998249058";
+
 const enviarWhatsApp = (plano) => {
-  const numero = "5549998249058";
-
-  const mensagem = `Olá! 
-Tenho interesse no plano ${plano} da VITTA Contábil.
-Poderia me passar mais informações?`;
-
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-
-  window.open(url, "_blank");
+  const msg = `Olá!\nTenho interesse no plano ${plano} da VITTA Contábil.\nPoderia me passar mais informações?`;
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
 };
+
+function PlanCard({ name, subtitle, price, period, installments, features, featured, destaque, badge }) {
+  const cls = ["plan-card", featured && "featured", destaque && "destaque-maior"]
+    .filter(Boolean).join(" ");
+
+  return (
+    <div className={cls}>
+      {badge && <div className="plan-badge">{badge}</div>}
+      <div className="plan-name">{name}</div>
+      <p className="plan-subtitle">{subtitle}</p>
+
+      <div className="plan-price-row">
+        <span className="plan-currency">R$</span>
+        <span className="plan-price">{price}</span>
+      </div>
+      <p className="plan-period">/mês</p>
+      {installments && <p className="plan-installments">{installments}</p>}
+
+      <hr className="plan-divider" />
+
+      <ul className="plan-features">
+        {features.map((f) => (
+          <li key={f}><span className="feat-check">✓</span>{f}</li>
+        ))}
+      </ul>
+
+      <button className="plan-btn" onClick={() => enviarWhatsApp(name)}>
+        Quero esse plano
+      </button>
+    </div>
+  );
+}
 
 function Plans() {
   return (
     <section className="plans" id="planos">
-        <h1>Consulte nossos planos:</h1>
+      <div className="plans-inner">
 
-        <h2>
-            Contabilidade Digital para <span>MEIs</span>
-        </h2>
-
-        <div className="plans-container">
-
-            {/* CLASSIC */}
-            <div className="card">
-                <div className="card-content">
-                    <h3>Classic</h3>
-
-                    <p className="subtitle">
-                        Ideal para quem não possui funcionários e precisa do essencial.
-                    </p>
-
-                    <div className="price">
-                        <span>R$</span>
-                        <h1>50</h1>
-                        <small>/mês</small>
-                    </div>
-
-                    <p className="installments">
-                        No plano anual em 12x no cartão de crédito
-                    </p>
-
-                    <ul className="benefits">
-                    <li>Abertura da empresa no MEI sem custos</li>
-                    <li>Atendimento humanizado via WhatsApp</li>
-                    <li>Envio de declarações e impostos</li>
-                    <li>Monitoramento de pendências federais</li>
-                    <li>Suporte via Whatsapp das 8h às 17h30</li>
-                    </ul>
-                </div>
-
-                <button onClick={() => enviarWhatsApp("Classic")}>
-                    Quero esse Plano
-                </button>
-            </div>
-
-            {/* PREMIUM */}
-            <div className="card featured">
-                {/*<div className="badge">Mais contratado</div>*/}
-
-                <div className="card-content">
-                    <h3>Premium</h3>
-
-                    <p className="subtitle">
-                        Para quem tem funcionários e precisa de suporte completo.
-                    </p>
-
-                    <div className="price">
-                        <span>R$</span>
-                        <h1>100</h1>
-                        <small>/mês</small>
-                    </div>
-
-                    <p className="installments">
-                        No plano anual em 12x no cartão de crédito
-                    </p>
-
-                    <ul className="benefits">
-                        <li>Abertura da empresa no MEI sem custos</li>
-                        <li>Atendimento humanizado via WhatsApp</li>
-                        <li>Envio de declarações e impostos</li>
-                        <li>Monitoramento de pendências federais</li>
-                        <li>Alteração de MEI</li>
-                        <li>Emissor de Notas Fiscais ilimitado</li>
-                        <li>Folha de pagamento</li>
-                        <li>Suporte via Whatsapp das 8h às 17h30</li>
-                    </ul>
-                </div>
-
-                <button onClick={() => enviarWhatsApp("Premium")}>
-                    Quero esse Plano
-                </button>
-            </div>
-
+        {/* CABEÇALHO */}
+        <div className="plans-header">
+          <span className="plans-tag">Planos e preços</span>
+          <h1>Transparência que você merece</h1>
+          <p>Sem letras miúdas, sem surpresas. Escolha o plano ideal para o seu momento.</p>
         </div>
 
-        <h2>
-            <br />
-            Contabilidade para Prestadores de Serviço 
-        </h2>
-
-        <div className="plans-container">
-
-            {/* Essencial */}
-            <div className="card">
-                <div className="card-content">
-                    <h3>Essencial</h3>
-
-                    <p className="subtitle">
-                        Ideal para quem não possui funcionários e precisa do essencial.
-                    </p>
-
-                    <div className="price">
-                        <span>R$</span>
-                        <h1>250</h1>
-                        <small>/mês</small> <br />
-                    </div>
-
-                    <ul className="benefits">
-                        <li>Escrituração contábil/fiscal/departamento pessoal</li>
-                        <li>Apuração dos impostos</li>
-                        <li>Envio de obrigações mensais</li>
-                        <li>Suporte via WhatsApp</li>
-                        <li> Orientações básicas fiscais</li>
-                    </ul>
-                </div>
-
-                <button onClick={() => enviarWhatsApp("Essencial")}>
-                    Quero esse Plano
-                </button>
-            </div>
-
-            {/* Gestão */}
-            <div className="card featured">
-                {/*<div className="badge">Mais contratado</div>*/}
-
-                <div className="card-content">
-                    <h3>Gestão</h3>
-
-                    <p className="subtitle">
-                        Para quem quer organização e acompanhamento mais próximo
-                    </p>
-
-                    <div className="price">
-                        <span>R$</span>
-                        <h1>350</h1>
-                        <small>/mês</small> <br />
-                    </div>
-
-                    <ul className="benefits">
-                        <li>Tudo do Essencial</li>
-                        <li>Controle e orientação sobre pró-labore</li>
-                        <li>Relatórios básicos de faturamento</li>
-                        <li>Planejamento tributário simplificado</li>
-                        <li>Atendimento prioritário</li>
-                    </ul>
-                </div>
-
-                    <button onClick={() => enviarWhatsApp("Gestão")}>
-                        Quero esse Plano
-                    </button>
-            </div>
-
-            {/* Estrategico */}
-            <div className="card featured destaque-maior">
-                {/*<div className="badge">Mais contratado</div>*/}
-
-                <div className="card-content">
-                    <h3>Estratégico</h3>
-
-                    <p className="subtitle">
-                        Para empresas com equipe ou que querem crescimento estruturado
-                    </p>
-
-                   <div className="price">
-                        <span>R$</span>
-                        <h1>490</h1>
-                        <small>/mês</small>
-                    </div>
-                    <ul className="benefits">
-                        <li>Tudo do Essencial</li>
-                        <li>Folha de pagamento (até 2 funcionários)</li>
-                        <li>Gestão de férias e rescisões</li>
-                        <li>Relatórios financeiros personalizados</li>
-                        <li>Reunião trimestral de alinhamento</li>
-                    </ul>
-                </div>
-
-                    <button onClick={() => enviarWhatsApp("Estratégico")}>
-                        Quero esse Plano
-                    </button>
-            </div>
+        {/* ── MEI ── */}
+        <div className="plans-block">
+          <div className="plans-block-title">
+            <h2>Contabilidade Digital para <span>MEIs</span></h2>
+            <div className="plans-block-line" />
+          </div>
+          <div className="plans-container">
+            <PlanCard
+              name="Classic"
+              subtitle="Ideal para quem não possui funcionários e precisa do essencial."
+              price="50"
+              period="/mês"
+              installments="No plano anual em 12x no cartão de crédito"
+              features={[
+                "Abertura da empresa no MEI sem custos",
+                "Atendimento humanizado via WhatsApp",
+                "Envio de declarações e impostos",
+                "Monitoramento de pendências federais",
+                "Suporte via WhatsApp das 8h às 17h30",
+              ]}
+            />
+            <PlanCard
+              name="Premium"
+              subtitle="Para quem tem funcionários e precisa de suporte completo."
+              price="100"
+              period="/mês"
+              installments="No plano anual em 12x no cartão de crédito"
+              badge="Mais completo"
+              featured
+              features={[
+                "Abertura da empresa no MEI sem custos",
+                "Atendimento humanizado via WhatsApp",
+                "Envio de declarações e impostos",
+                "Monitoramento de pendências federais",
+                "Alteração de MEI",
+                "Emissor de Notas Fiscais ilimitado",
+                "Folha de pagamento",
+                "Suporte via WhatsApp das 8h às 17h30",
+              ]}
+            />
+          </div>
         </div>
-    
-        <h2>
-            <br />
-            Contabilidade para Comércio 
-        </h2>
 
-        <div className="plans-container">
-
-            {/* Essencial */}
-            <div className="card">
-                <div className="card-content">
-                    <h3>Essencial</h3>
-
-                    <p className="subtitle">
-                        Ideal para pequenos comércios sem funcionários
-                    </p>
-
-                    <div className="price">
-                    <span>R$</span>
-                    <h1>300</h1>
-                    <small>/mês</small> <br />
-                    </div>
-
-                    <ul className="benefits">
-                    <li>Apuração do Impostos</li>
-                    <li>Escrituração fiscal (NF-e de entrada e saída)</li>
-                    <li>Envio das obrigações mensais</li>
-                    <li>Orientação sobre emissão de notas</li>
-                    <li>Suporte via WhatsApp</li>
-                    </ul>
-                </div>
-
-                    <button onClick={() => enviarWhatsApp("Essencial de Comércio")}>
-                        Quero esse Plano
-                    </button>
-            </div>
-
-            {/* Gestão */}
-            <div className="card featured">
-                {/*<div className="badge">Mais contratado</div>*/}
-
-                <div className="card-content">
-                    <h3>Gestão</h3>
-
-                    <p className="subtitle">
-                        Para comércios com funcionários ou maior volume de operação
-                    </p>
-
-                    <div className="price">
-                        <span>R$</span>
-                        <h1>490</h1>
-                        <small>/mês</small>
-                    </div>
-
-                    <ul className="benefits">
-                        <li>Tudo do Essencial</li>
-                        <li>Folha de pagamento (até 3 funcionários)</li>
-                        <li>Gestão de férias e rescisões</li>
-                        <li>Orientação sobre fiscal e contabilidade</li>
-                        <li>Relatório básico de faturamento</li>
-                        <li>Atendimento prioritário</li>
-                    </ul>
-                </div>
-
-                    <button onClick={() => enviarWhatsApp("Gestão de Comércio")}>
-                        Quero esse Plano
-                    </button>
-            </div>
-
+        {/* ── PRESTADORES DE SERVIÇO ── */}
+        <div className="plans-block">
+          <div className="plans-block-title">
+            <h2>Contabilidade para <span>Prestadores de Serviço</span></h2>
+            <div className="plans-block-line" />
+          </div>
+          <div className="plans-container">
+            <PlanCard
+              name="Essencial"
+              subtitle="Ideal para quem não possui funcionários e precisa do essencial."
+              price="250"
+              features={[
+                "Escrituração contábil/fiscal/departamento pessoal",
+                "Apuração dos impostos",
+                "Envio de obrigações mensais",
+                "Suporte via WhatsApp",
+                "Orientações básicas fiscais",
+              ]}
+            />
+            <PlanCard
+              name="Gestão"
+              subtitle="Para quem quer organização e acompanhamento mais próximo."
+              price="350"
+              badge="Mais popular"
+              featured
+              features={[
+                "Tudo do Essencial",
+                "Controle e orientação sobre pró-labore",
+                "Relatórios básicos de faturamento",
+                "Planejamento tributário simplificado",
+                "Atendimento prioritário",
+              ]}
+            />
+            <PlanCard
+              name="Estratégico"
+              subtitle="Para empresas com equipe ou que querem crescimento estruturado."
+              price="490"
+              destaque
+              features={[
+                "Tudo do Essencial",
+                "Folha de pagamento (até 2 funcionários)",
+                "Gestão de férias e rescisões",
+                "Relatórios financeiros personalizados",
+                "Reunião trimestral de alinhamento",
+              ]}
+            />
+          </div>
         </div>
-    
+
+        {/* ── COMÉRCIO ── */}
+        <div className="plans-block">
+          <div className="plans-block-title">
+            <h2>Contabilidade para <span>Comércio</span></h2>
+            <div className="plans-block-line" />
+          </div>
+          <div className="plans-container">
+            <PlanCard
+              name="Essencial"
+              subtitle="Ideal para pequenos comércios sem funcionários."
+              price="300"
+              features={[
+                "Apuração de impostos",
+                "Escrituração fiscal (NF-e de entrada e saída)",
+                "Envio das obrigações mensais",
+                "Orientação sobre emissão de notas",
+                "Suporte via WhatsApp",
+              ]}
+            />
+            <PlanCard
+              name="Gestão"
+              subtitle="Para comércios com funcionários ou maior volume de operação."
+              price="490"
+              badge="Mais popular"
+              featured
+              features={[
+                "Tudo do Essencial",
+                "Folha de pagamento (até 3 funcionários)",
+                "Gestão de férias e rescisões",
+                "Orientação sobre fiscal e contabilidade",
+                "Relatório básico de faturamento",
+                "Atendimento prioritário",
+              ]}
+            />
+          </div>
+        </div>
+
+        <p style={{ textAlign: "center", marginTop: 24, fontSize: 13, color: "#5a6472" }}>
+          Diagnóstico gratuito incluso em todos os planos.
+        </p>
+
+      </div>
     </section>
   );
 }
